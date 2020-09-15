@@ -1,0 +1,125 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.decisions {
+  padding: 5px 12px 21px 12px;
+  background-color: #ffffff;
+  overflow-x: hidden;
+
+  &__description {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: normal;
+    letter-spacing: -0.015em;
+    margin-bottom: 23px;
+  }
+
+  &__list {
+    display: flex;
+    @include list-reset;
+    margin-top: 24px;
+  }
+
+  &__item {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: block;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 12px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    border: 1px solid #E7EBEE;
+    border-radius: 4px;
+    padding: 13px 20px;
+  }
+
+  &__link--active {
+    background-color: #E7EBEE;
+  }
+}
+
+
+@media (max-width: $mobile-width-only) {
+  .decisions {
+    &__list {
+      overflow-x: scroll;
+    }
+
+    .decisions__item:nth-child(1) &__link {
+      width: 210px;
+    }
+
+    .decisions__item:nth-child(2) &__link {
+      width: 175px !important;
+    }
+
+    .decisions__item:nth-child(3) &__link {
+      width: 125px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .decisions {
+    padding: 3px 32px 22px 32px;
+
+    &__description {
+      font-size: 32px;
+      line-height: 32px;
+      font-weight: normal;
+      letter-spacing: -0.02em;
+      width: 500px;
+    }
+
+    &__item {
+      margin-right: 10px;
+    }
+
+    &__link {
+      font-size: 11px;
+      line-height: 16px;
+      letter-spacing: 0.2px;
+      padding: 14px 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .decisions {
+    width: 100%;
+    max-width: 1536px;
+    margin: 0 auto;
+    padding-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 42px;
+
+    &__description {
+      font-size: 44px;
+      line-height: 44px;
+      width: 400px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    &__link {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 20px 24px;
+      border-radius: 8px;
+    }
+
+    &__item {
+      margin-right: 16px;
+    }
+
+    &__item:last-child {
+      margin-right: 0;
+    }
+  }
+}

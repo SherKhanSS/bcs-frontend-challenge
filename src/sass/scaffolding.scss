@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Suisse Int\'l';
+  src: local('Suisse Int\'l'),
+		url('../fonts/SuisseIntl-Regular.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Suisse Int\'l';
+  src: local('Suisse Int\'l Medium'),
+		url('../fonts/SuisseIntl-Medium.woff2') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Suisse Int\'l", "Geneva", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  background-color: #e5e5e5;
+}
+
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
